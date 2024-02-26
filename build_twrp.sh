@@ -27,4 +27,4 @@ Makefile_Name=$7
 Build_Target=$8
 
 # Run the GitHub Actions workflow with the specified URL
-gh workflow run build_recovery.yml -f Manifest_URL=$Manifest_URL -f Manifest_Branch=$Manifest_Branch -f Device_Tree_URL=$Device_Tree_URL -f Device_Tree_Branch=$Device_Tree_Branch -f Device_Path=$Device_Path -f Device_Name=$Device_Name -f Makefile_Name=$Makefile_Name -f Build_Target=$Build_Target
+gh workflow run build_recovery.yml -f MANIFEST_URL=$Manifest_URL -f MANIFEST_BRANCH=$Manifest_Branch -f DEVICE_TREE_URL=$Device_Tree_URL -f DEVICE_TREE_BRANCH=$Device_Tree_Branch -f DEVICE_PATH=$Device_Path -f DEVICE_NAME=$Device_Name -f MAKEFILE_NAME=$Makefile_Name -f BUILD_TARGET=$Build_Target
