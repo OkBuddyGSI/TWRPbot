@@ -49,4 +49,4 @@ def request_twrp_build(m):
         # Reply with a message indicating that a URL is needed for the request
         bot.reply_to(m, "I need the device tree URL to work")
         bot.reply_to(m, "Usage is as follows: /request (Manifest_URL) (Manifest_Branch) (Device_Tree_URL) (Device_Tree_Branch) (Device_Path) (Device_Name) (Makefile_Name) (Build_Target)")
-        bot.reply_to(m, "Example: /request https://github.com/minimal-manifest-twrp/platform_manifest_twrp_aosp twrp-12.1 https://github.com/TeamWin/android_device_asus_I003D android-12.1 device/asus/I003D I003D twrp_I003D recovery.img")
+        bot.reply_to(m, "Example: /request https://github.com/minimal-manifest-twrp/platform_manifest_twrp_aosp twrp-12.1 https://github.com/TeamWin/android_device_asus_I003D android-12.1 device/asus/I003D I003D twrp_I003D recovery")
