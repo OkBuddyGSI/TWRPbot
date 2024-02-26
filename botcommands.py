@@ -35,7 +35,7 @@ def request_twrp_build(m):
         Device_Path = m.text.split()[5]
         Device_Name = m.text.split()[6]
         Makefile_Name = f"twrp_{Device_Name}"
-        Build_Target = m.text.split()[8]
+        Build_Target = m.text.split()[7]
         # Execute one of the dumping scripts with the URL as an argument
         result = os.system(f'bash {twrp_building_script} {Manifest_URL} {Manifest_Branch} {Device_Tree_URL} {Device_Tree_Branch} {Device_Path} {Device_Name} {Makefile_Name} {Build_Target}')
         # Check the result of the script execution
