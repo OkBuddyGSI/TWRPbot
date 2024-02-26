@@ -16,7 +16,7 @@ def command(m):
         bot.reply_to(m, f"Hi, if you want to use me please join this group: {group_url}")
         bot.send_message(m.chat.id, f"This bot is created by: {bot_creator}")
     # Check if the received command starts with "/request"
-    if m.text.split()[0] =="/request":
+    if m.text.split()[0] =="/twrp":
         # Check if the user is in the correct group to make requests
         if m.chat.id == request_id:
             # Call the request function to process the request
@@ -28,13 +28,13 @@ def command(m):
 def request_twrp_build(m):
     try:
         # Extract the URL from the user's message
-        Manifest_URL = m.text.split()[1]
+        Manifest_URL = "https://github.com/minimal-manifest-twrp/platform_manifest_twrp_aosp"
         Manifest_Branch = m.text.split()[2]
         Device_Tree_URL = m.text.split()[3]
         Device_Tree_Branch = m.text.split()[4]
         Device_Path = m.text.split()[5]
         Device_Name = m.text.split()[6]
-        Makefile_Name = m.text.split()[7]
+        Makefile_Name = f"twrp_{Device_Name}"
         Build_Target = m.text.split()[8]
         # Execute one of the dumping scripts with the URL as an argument
         result = os.system(f'bash {twrp_building_script} {Manifest_URL} {Manifest_Branch} {Device_Tree_URL} {Device_Tree_Branch} {Device_Path} {Device_Name} {Makefile_Name} {Build_Target}')
@@ -48,5 +48,5 @@ def request_twrp_build(m):
     except:
         # Reply with a message indicating that a URL is needed for the request
         bot.reply_to(m, "I need the device tree URL to work")
-        bot.reply_to(m, "Usage is as follows: /request (Manifest_URL) (Manifest_Branch) (Device_Tree_URL) (Device_Tree_Branch) (Device_Path) (Device_Name) (Makefile_Name) (Build_Target)")
-        bot.reply_to(m, "Example: /request https://github.com/minimal-manifest-twrp/platform_manifest_twrp_aosp twrp-12.1 https://github.com/TeamWin/android_device_asus_I003D android-12.1 device/asus/I003D I003D twrp_I003D recovery")
+        bot.reply_to(m, "Usage is as follows: /twrp (Manifest_Branch) (Device_Tree_URL) (Device_Tree_Branch) (Device_Path) (Device_Name) (Build_Target)")
+        bot.reply_to(m, "Example: /twrp twrp-12.1 https://github.com/TeamWin/android_device_asus_I003D android-12.1 device/asus/I003D I003D recovery")
