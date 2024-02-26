@@ -25,7 +25,7 @@ def command(m):
             # Reply with a message asking the user to join the correct group
             bot.reply_to(m, f"Please join this group and use me there: {group_url}")
 
-def request_twrp_build():
+def request_twrp_build(m):
     try:
         # Extract the URL from the user's message
         Manifest_URL = m.text.split()[1]
