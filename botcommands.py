@@ -29,13 +29,13 @@ def request_twrp_build(m):
     try:
         # Extract the URL from the user's message
         Manifest_URL = "https://github.com/minimal-manifest-twrp/platform_manifest_twrp_aosp"
-        Manifest_Branch = m.text.split()[2]
-        Device_Tree_URL = m.text.split()[3]
-        Device_Tree_Branch = m.text.split()[4]
-        Device_Path = m.text.split()[5]
-        Device_Name = m.text.split()[6]
+        Manifest_Branch = m.text.split()[1]
+        Device_Tree_URL = m.text.split()[2]
+        Device_Tree_Branch = m.text.split()[3]
+        Device_Path = m.text.split()[4]
+        Device_Name = m.text.split()[5]
         Makefile_Name = f"twrp_{Device_Name}"
-        Build_Target = m.text.split()[7]
+        Build_Target = m.text.split()[6]
         # Execute one of the dumping scripts with the URL as an argument
         result = os.system(f'bash {twrp_building_script} {Manifest_URL} {Manifest_Branch} {Device_Tree_URL} {Device_Tree_Branch} {Device_Path} {Device_Name} {Makefile_Name} {Build_Target}')
         # Check the result of the script execution
