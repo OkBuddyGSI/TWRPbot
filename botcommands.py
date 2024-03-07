@@ -3,7 +3,8 @@ from info import *
 import os
 
 twrp_building_script = "build_twrp.sh"
-pbrp_building_script = "build_twrp.sh"
+pbrp_building_script = "build_pbrp.sh"
+ofox_building_script = "build_ofox.sh"
 
 
 # Setting up variables for group ID and group URL
