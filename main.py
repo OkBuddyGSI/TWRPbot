@@ -1,7 +1,7 @@
 from botcommands import *
 from telebot import util
 
-@bot.message_handler(commands=['start', 'twrp'])
+@bot.message_handler(commands=['start', 'twrp', 'pbrp', 'ofox'])
 def command_handler(m):
     command(m)
 
