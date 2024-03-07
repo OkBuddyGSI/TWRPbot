@@ -36,6 +36,15 @@ def command(m):
         else:
             # Reply with a message asking the user to join the correct group
             bot.reply_to(m, f"Please join this group and use me there: {group_url}")
+    # Check if the received command starts with "/ofox"
+    if m.text.split()[0] =="/ofox":
+        # Check if the user is in the correct group to make requests
+        if m.chat.id == request_id:
+            # Call the request function to process the request
+            request_ofox_build(m)
+        else:
+            # Reply with a message asking the user to join the correct group
+            bot.reply_to(m, f"Please join this group and use me there: {group_url}")
 
 def request_twrp_build(m):
     try:
