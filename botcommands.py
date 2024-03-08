@@ -98,7 +98,7 @@ def request_pbrp_build(m):
     except:
         # Reply with a message indicating that a URL is needed for the request
         bot.reply_to(m, "You need to give me the required arguments in the correct order")
-        bot.reply_to(m, "Usage is as follows: /twrp (Manifest_Branch) (Device_Tree_URL) (Device_Tree_Branch) (Device_Path) (Device_Name) (Build_Target)")
+        bot.reply_to(m, "Usage is as follows: /pbrp (Manifest_Branch) (Device_Tree_URL) (Device_Tree_Branch) (Device_Path) (Device_Name) (Build_Target)")
         bot.reply_to(m, "Example: /pbrp android-12.1 https://github.com/TeamWin/android_device_asus_I003D android-12.1 device/asus/I003D I003D recovery")
 
 def request_ofox_build(m):
@@ -125,5 +125,5 @@ def request_ofox_build(m):
     except:
         # Reply with a message indicating that a URL is needed for the request
         bot.reply_to(m, "You need to give me the required arguments in the correct order")
-        bot.reply_to(m, "Usage is as follows: /twrp (Manifest_Branch) (Device_Tree_URL) (Device_Tree_Branch) (Device_Path) (Device_Name) (Build_Target)")
+        bot.reply_to(m, "Usage is as follows: /ofox (Manifest_Branch) (Device_Tree_URL) (Device_Tree_Branch) (Device_Path) (Device_Name) (Build_Target)")
         bot.reply_to(m, "Example: /ofox 12.1 https://github.com/TeamWin/android_device_asus_I003D android-12.1 device/asus/I003D I003D recovery")
