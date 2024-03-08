@@ -8,8 +8,8 @@ ofox_building_script = "build_ofox.sh"
 
 
 # Setting up variables for group ID and group URL
-request_id = -4177520948
-group_url = "https://t.me/+LcVNpdqBaMlmNjg0"
+request_id = -1002108265780
+group_url = "https://t.me/OkBuddyGSI"
 
 # Function to handle commands received by the bot
 def command(m): 
@@ -21,7 +21,7 @@ def command(m):
     # Check if the received command starts with "/twrp"
     if m.text.split()[0] =="/twrp":
         # Check if the user is in the correct group to make requests
-        if m.chat.id == request_id:
+        if m.chat.id in request_id:
             # Call the request function to process the request
             request_twrp_build(m)
         else:
@@ -30,7 +30,7 @@ def command(m):
     # Check if the received command starts with "/pbrp"
     if m.text.split()[0] =="/pbrp":
         # Check if the user is in the correct group to make requests
-        if m.chat.id == request_id:
+        if m.chat.id in request_id:
             # Call the request function to process the request
             request_pbrp_build(m)
         else:
@@ -39,7 +39,7 @@ def command(m):
     # Check if the received command starts with "/ofox"
     if m.text.split()[0] =="/ofox":
         # Check if the user is in the correct group to make requests
-        if m.chat.id == request_id:
+        if m.chat.id in request_id:
             # Call the request function to process the request
             request_ofox_build(m)
         else:
