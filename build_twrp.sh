@@ -12,9 +12,9 @@ gh auth login --with-token < token.txt
 
 
 # Set the repository
-git clone https://github.com/IMYdev/TG-X-GH-actions_TWRP-Builder
+git clone https://github.com/TeamPear-OS-Project/TG-X-GH-actions_TWRP-Builder
 cd TG-X-GH-actions_TWRP-Builder
-gh repo set-default https://github.com/IMYdev/TG-X-GH-actions_TWRP-Builder
+gh repo set-default https://github.com/TeamPear-OS-Project/TG-X-GH-actions_TWRP-Builder
 
 # Pass everything as an argument coz why not
 Manifest_URL=$1
