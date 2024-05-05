@@ -12,9 +12,9 @@ gh auth login --with-token < token.txt
 
 
 # Set the repository
-git clone https://github.com/TeamPear-OS-Project/TG-X-GH-actions_OFOX-Builder
+git clone https://github.com/IMYdev/TG-X-GH-actions_OFOX-Builder
 cd TG-X-GH-actions_OFOX-Builder
-gh repo set-default https://github.com/TeamPear-OS-Project/TG-X-GH-actions_OFOX-Builder
+gh repo set-default https://github.com/IMYdev/TG-X-GH-actions_OFOX-Builder
 
 # Pass everything as an argument coz why not
 Sync_URL=$1

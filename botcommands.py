@@ -63,7 +63,7 @@ def request_twrp_build(m):
         if result == 0:
             # Reply with a success message if the script executed successfully
             bot.reply_to(m, "Successfully requested the build!")
-            bot.reply_to(m, "Check progress here: https://github.com/TeamPear-OS-Project/TG-X-GH-actions_TWRP-Builder/actions")
+            bot.reply_to(m, "Check progress here: https://github.com/IMYdev/TG-X-GH-actions_TWRP-Builder/actions")
         else:
             # Reply with an error message if something went wrong during script execution
             bot.reply_to(m, "Something went wrong")
@@ -91,7 +91,7 @@ def request_pbrp_build(m):
         if result == 0:
             # Reply with a success message if the script executed successfully
             bot.reply_to(m, "Successfully requested the build!")
-            bot.reply_to(m, "Check progress here: https://github.com/TeamPear-OS-Project/TG-X-GH-actions_TWRP-Builder/actions")
+            bot.reply_to(m, "Check progress here: https://github.com/IMYdev/TG-X-GH-actions_TWRP-Builder/actions")
         else:
             # Reply with an error message if something went wrong during script execution
             bot.reply_to(m, "Something went wrong")
@@ -118,7 +118,7 @@ def request_ofox_build(m):
         if result == 0:
             # Reply with a success message if the script executed successfully
             bot.reply_to(m, "Successfully requested the build!")
-            bot.reply_to(m, "Check progress here: https://github.com/TeamPear-OS-Project/TG-X-GH-actions_OFOX-Builder/actions")
+            bot.reply_to(m, "Check progress here: https://github.com/IMYdev/TG-X-GH-actions_OFOX-Builder/actions")
         else:
             # Reply with an error message if something went wrong during script execution
             bot.reply_to(m, "Something went wrong")
