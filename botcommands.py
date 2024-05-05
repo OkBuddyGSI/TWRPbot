@@ -57,16 +57,23 @@ def request_twrp_build(m):
         Device_Name = m.text.split()[5]
         Makefile_Name = f"twrp_{Device_Name}"
         Build_Target = m.text.split()[6]
-        # Execute one of the dumping scripts with the URL as an argument
-        result = os.system(f'bash {twrp_building_script} {Manifest_URL} {Manifest_Branch} {Device_Tree_URL} {Device_Tree_Branch} {Device_Path} {Device_Name} {Makefile_Name} {Build_Target}')
-        # Check the result of the script execution
-        if result == 0:
-            # Reply with a success message if the script executed successfully
-            bot.reply_to(m, "Successfully requested the build!")
-            bot.reply_to(m, "Check progress here: https://github.com/IMYdev/TG-X-GH-actions_TWRP-Builder/actions")
+        # Construct the command string for building TWRP using specified variables
+        command = f'bash {twrp_building_script} {Manifest_URL} {Manifest_Branch} {Device_Tree_URL} {Device_Tree_Branch} {Device_Path} {Device_Name} {Makefile_Name} {Build_Target}'
+        # Check if the command string contains '&' which could potentially allow executing unintended commands
+        if "&" in command:
+            # If '&' is detected, roast the faka lol
+            bot.reply_to("bro thinks he's a hacker, lol go fuck yourself")
         else:
-            # Reply with an error message if something went wrong during script execution
-            bot.reply_to(m, "Something went wrong")
+            # If the command is clean, execute it in the system shell
+            result = os.system(command)
+            # Check the result of the script execution
+            if result == 0:
+                # Reply with a success message if the script executed successfully
+                bot.reply_to(m, "Successfully requested the build!")
+                bot.reply_to(m, "Check progress here: https://github.com/IMYdev/TG-X-GH-actions_TWRP-Builder/actions")
+            else:
+                # Reply with an error message if something went wrong during script execution
+                bot.reply_to(m, "Something went wrong")
     except:
         # Reply with a message indicating that a URL is needed for the request
         bot.reply_to(m, "You need to give me the required arguments in the correct order")
@@ -85,16 +92,23 @@ def request_pbrp_build(m):
         Device_Name = m.text.split()[5]
         Makefile_Name = f"pb_{Device_Name}"
         Build_Target = m.text.split()[6]
-        # Execute one of the dumping scripts with the URL as an argument
-        result = os.system(f'bash {pbrp_building_script} {Manifest_URL} {Manifest_Branch} {Device_Tree_URL} {Device_Tree_Branch} {Device_Path} {Device_Name} {Makefile_Name} {Build_Target}')
-        # Check the result of the script execution
-        if result == 0:
-            # Reply with a success message if the script executed successfully
-            bot.reply_to(m, "Successfully requested the build!")
-            bot.reply_to(m, "Check progress here: https://github.com/IMYdev/TG-X-GH-actions_TWRP-Builder/actions")
+        # Construct the command string for building TWRP using specified variables
+        command = f'bash {twrp_building_script} {Manifest_URL} {Manifest_Branch} {Device_Tree_URL} {Device_Tree_Branch} {Device_Path} {Device_Name} {Makefile_Name} {Build_Target}'
+        # Check if the command string contains '&' which could potentially allow executing unintended commands
+        if "&" in command:
+            # If '&' is detected, roast the faka lol
+            bot.reply_to("bro thinks he's a hacker, lol go fuck yourself")
         else:
-            # Reply with an error message if something went wrong during script execution
-            bot.reply_to(m, "Something went wrong")
+            # If the command is clean, execute it in the system shell
+            result = os.system(command)
+            # Check the result of the script execution
+            if result == 0:
+                # Reply with a success message if the script executed successfully
+                bot.reply_to(m, "Successfully requested the build!")
+                bot.reply_to(m, "Check progress here: https://github.com/IMYdev/TG-X-GH-actions_TWRP-Builder/actions")
+            else:
+                # Reply with an error message if something went wrong during script execution
+                bot.reply_to(m, "Something went wrong")
     except:
         # Reply with a message indicating that a URL is needed for the request
         bot.reply_to(m, "You need to give me the required arguments in the correct order")
@@ -112,16 +126,22 @@ def request_ofox_build(m):
         Device_Name = m.text.split()[5]
         Makefile_Name = f"twrp_{Device_Name}"
         Build_Target = m.text.split()[6]
-        # Execute one of the dumping scripts with the URL as an argument
-        result = os.system(f'bash {ofox_building_script} {Sync_URL} {Manifest_Branch} {Device_Tree_URL} {Device_Tree_Branch} {Device_Path} {Device_Name} {Makefile_Name} {Build_Target}')
-        # Check the result of the script execution
-        if result == 0:
-            # Reply with a success message if the script executed successfully
-            bot.reply_to(m, "Successfully requested the build!")
-            bot.reply_to(m, "Check progress here: https://github.com/IMYdev/TG-X-GH-actions_OFOX-Builder/actions")
+        # Construct the command string for building TWRP using specified variables
+        command = f'bash {twrp_building_script} {Manifest_URL} {Manifest_Branch} {Device_Tree_URL} {Device_Tree_Branch} {Device_Path} {Device_Name} {Makefile_Name} {Build_Target}'
+        # Check if the command string contains '&' which could potentially allow executing unintended commands
+        if "&" in command:
+            # If '&' is detected, roast the faka lol
+            bot.reply_to("bro thinks he's a hacker, lol go fuck yourself")
         else:
-            # Reply with an error message if something went wrong during script execution
-            bot.reply_to(m, "Something went wrong")
+            # If the command is clean, execute it in the system shell
+            result = os.system(command)
+            if result == 0:
+                # Reply with a success message if the script executed successfully
+                bot.reply_to(m, "Successfully requested the build!")
+                bot.reply_to(m, "Check progress here: https://github.com/IMYdev/TG-X-GH-actions_OFOX-Builder/actions")
+            else:
+                # Reply with an error message if something went wrong during script execution
+                bot.reply_to(m, "Something went wrong")
     except:
         # Reply with a message indicating that a URL is needed for the request
         bot.reply_to(m, "You need to give me the required arguments in the correct order")
