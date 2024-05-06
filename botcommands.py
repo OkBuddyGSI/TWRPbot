@@ -93,7 +93,7 @@ def request_pbrp_build(m):
         Makefile_Name = f"pb_{Device_Name}"
         Build_Target = m.text.split()[6]
         # Construct the command string for building TWRP using specified variables
-        command = f'bash {twrp_building_script} {Manifest_URL} {Manifest_Branch} {Device_Tree_URL} {Device_Tree_Branch} {Device_Path} {Device_Name} {Makefile_Name} {Build_Target}'
+        command = f'bash {pbrp_building_script} {Manifest_URL} {Manifest_Branch} {Device_Tree_URL} {Device_Tree_Branch} {Device_Path} {Device_Name} {Makefile_Name} {Build_Target}'
         # Check if the command string contains '&' which could potentially allow executing unintended commands
         if "&" in command:
             # If '&' is detected, roast the faka lol
@@ -127,7 +127,7 @@ def request_ofox_build(m):
         Makefile_Name = f"twrp_{Device_Name}"
         Build_Target = m.text.split()[6]
         # Construct the command string for building TWRP using specified variables
-        command = f'bash {twrp_building_script} {Manifest_URL} {Manifest_Branch} {Device_Tree_URL} {Device_Tree_Branch} {Device_Path} {Device_Name} {Makefile_Name} {Build_Target}'
+        command = f'bash {ofox_building_script} {Manifest_URL} {Manifest_Branch} {Device_Tree_URL} {Device_Tree_Branch} {Device_Path} {Device_Name} {Makefile_Name} {Build_Target}'
         # Check if the command string contains '&' which could potentially allow executing unintended commands
         if "&" in command:
             # If '&' is detected, roast the faka lol
